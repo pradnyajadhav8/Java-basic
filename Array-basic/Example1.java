@@ -12,7 +12,7 @@ Expected Output:
 
 */
 
-class Array1{
+class Example1{
 
 	static int[] getValues(){
 		int A[]={10,20,30,40,50};
