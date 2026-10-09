@@ -1,0 +1,191 @@
+collection [interface]
+list [interface]
+  |
+ArrayList {default size -10}
+
+Arraylist : -
+	1: dynamic Array
+	2: searching
+	3: insertion deletion
+	4: maintain insertion order
+
+RetainAll Method: -
+								comman Object are Remain in ArrayList.
+								
+Iterator :-
+				interface collection{
+					Iterator iterator(){
+
+						
+					}
+				}
+
+				Arraylist implements 
+				Iteratoer Design Pattern
+
+_________________________________________________________________
+
+sorting 
+
+	bubble sort 
+	insertion sort
+	selection sort
+
+	backtracking also sort the array
+
+bubble sort:--(n-1 comparision)
+	7	8	3	1	2
+
+	end-1(bhari element);---run the loop
+	(7-8) (8-3) (3-1) (1-2)[compare like pair]
+
+import java.util.*;
+class Sorting{
+	public mstatic void main(String args[]){
+		int[] arr={7,8,3,2,1};
+
+		//bubble sort
+		for(int i=0;i<arr.length;i++){//O(n^2)
+			for(int j=0;j<arr.length;j++){
+				if(arr[j]>arr[j+1]){
+					//swap
+					int temp= arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=temp;
+				}
+			}
+		}
+
+		printarr(arr);
+	}
+}
+
+Selection Sort:-
+	7	8	3	1	2
+
+	1] smallest=0th index 
+	compare with evryone swap with smallest than smallest.
+
+import java.util.*;
+class Sorting{
+	public mstatic void main(String args[]){
+		int[] arr={7,8,3,2,1};
+
+		//Selection sort
+		for(int i=0;i<arr.length;i++){//O(n^2)
+			int smallest=i;
+			for(int j=i+1;j<arr.length;j++){
+				if(arr[smallest]>arr[j]){
+					smallest=j;
+				}
+				int temp=arr[smallest];
+				arr[smallest]=arr[i];
+				arr[i]=temp;
+			}
+		}
+
+		printarr(arr);
+	}
+}
+
+Insertion Sort:--
+
+__________________________________________________________________
+
+
+list.add(); --> adding element in list
+list.get(i); --> public E get(int index){return arr[index]};
+list.isEmpty(); --> boolean
+list.contains(11);--> boolean
+
+# BE CAREFULL WHILE REMOVING OBJECT --> boolean
+System.out.println(list.remove(11)); //remove(int)-->this is not going to happends
+
+System.out.println(list.remove(Integer.valueOf(11))); --> remove(object);
+
+there are two kind of remove operation
+1) remove with int type 
+2) remove with object
+
+list.clear();
+
+System.out.println(list);
+
+Step-by-step Capicity Growth(Adding 100 Elements)
+
+Element Count -> Capacity
+_____________________________
+0-10	->	10 	(intial default capacity)
+11		->  15	(10 + 10/2  =15) <- RESIZE #1
+16 		-> 	22  (15 + 15/2  =22) <- Resize #2
+23 		->  33  
+
+Formula	:-	C*C/2
+
+ArrayList allows Duplicate element...!(addAll());
+c1.containsAll(c2); 	---> boolean
+
+removeAll(); 	--> removes the duplicate element also;
+
+retainAll(); 	--> 
+
+_________________________________________
+
+// Collection convert to Array
+//ArrayList --> Object[]
+//Object[] toArray() 
+
+Object arr[]=number.toArray();
+
+for(Object o1: arr)
+		System.out.println();
+
+Integer a[]=new Integer[number.size()]; 
+
+//T[] toArray(T [])
+
+Integer b[]= number.toArray(a);
+
+for(Integer x : b)
+		System.out.println(x);
+
+for(Integer x : b)
+		System.out.println(x);
+		
+// int[] 
+________________________________________________________________________________
+
+part-2
+
+retainAll(); ---> Intersection
+
+interface Collection{
+	Iterator iterator()			//return typr --> Iterator
+}
+
+public interface Iterator{
+	boolean hasNext()
+	E next()
+	void remove();
+}
+
+class ArrayList implement AbstractList{
+		Iterator iterator(){
+				//To Visit all element
+		}
+}
+
+public class Arraylist<E> extends AbstractList<E> implement List<E> RandomAccess, Cloneable, Serializable{
+	//Constructor
+
+	// methods
+
+	public Iterator iterator(){
+
+	}
+}
+___________________________________________________________________
+
+Methods In ArrayList :-
+
+		 
